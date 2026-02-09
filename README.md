@@ -7,6 +7,22 @@
 4) Merge placeholder file with translations using 3MergeSequentialAuto.js
 5) Validate whole script using Validator
 
+Russian master script
+        ↓
+extract-dialogue.js  (hash IDs)
+        ↓
+russian_lines_with_ids.txt
+        ↓
+GPT → english_lines_with_ids.txt
+        ↓
+mergeTranslations.js
+        ↓
+translation_db.txt
+        ↓
+applyToUnityScript.js  (inject translations, remove IDs)
+
+
+
 ## TO DO
 1) **Pack into standalone app**
 2) **Correct merge of lang, now it is only exchange one lang by another**

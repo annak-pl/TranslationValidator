@@ -37,18 +37,26 @@ if (!langKey) {
     process.exit(1);
 }
 
+
 // --- Load and split both files ---
 const baseLines = fs.readFileSync(baseFile, "utf8").split(/\r?\n/);
 const transLines = fs.readFileSync(translationFile, "utf8").split(/\r?\n/);
 
 // --- Collect all translations for the detected language ---
-const translations = [];
-for (const line of transLines) {
-    const trimmed = line.trim();
-    if (trimmed.startsWith(`${langKey}:`)) {
-        translations.push(trimmed.replace(new RegExp(`^${langKey}:\\s*`), ""));
-    }
-}
+// const translations = [];
+// for (const line of transLines) {
+//     const trimmed = line.trim();
+//     if (trimmed.startsWith(`${langKey}:`)) {
+//         translations.push(trimmed.replace(new RegExp(`^${langKey}:\\s*`), ""));
+//     }
+// }
+
+// --- Collect translations for detected language ---
+const translations = transLines
+    .map(l => l.trim())
+    .filter(l => l.startsWith(`${langKey}:`))
+    .map(l => l.replace(new RegExp(`^${langKey}:\\s*`), ""));
+
 
 // --- Merge into base ---
 let merged = [];
@@ -77,7 +85,7 @@ for (const line of baseLines) {
 
 // --- Write output ---
 // Create file if it doesn't exist, or overwrite safely (you could also append, but overwriting ensures alignment)
-fs.writeFileSync(outFile, merged.join("\n"), "utf8");
+fs.appendFileSync(outFile, merged.join("\n"), "utf8");
 
 console.log(`✅ Merged ${transIndex} lines into ${langKey}: placeholders in ${outFile}`);
 console.log(`Replaced ${transIndex} ${langKey}: lines with translated text.`);

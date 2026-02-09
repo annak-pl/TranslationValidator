@@ -1,0 +1,43 @@
+ID: 417c5ba768ca
+/say Samantha
+DE: …Kannst du nicht wenigstens einmal pünktlich zum Training kommen, ohne Theater, Brooke?
+
+ID: b2a97b95fd20
+/say Samantha
+DE: Das hier ist ’ne Volleyballhalle, kein Laufsteg. Hör auf, dich wie ’n Star aufzuspielen!
+
+ID: 1828167298cc
+/say Brooke
+DE: Oh, sorry, Captain, dass ich nicht in deine Roboterarmee passe!
+
+ID: 9bd56cbf65ba
+/say Brooke
+DE: Was kommt als Nächstes? Fehlstunde im Stundenplan und ’ne Strafe fürs Make-up?
+
+ID: 8aa1766296fe
+/say Roxanne
+DE: Oh wow, da geht’s ja richtig ab! Schade, hab’ keine Chips dabei.
+
+ID: 3e5444a1abd5
+/say Taylor
+DE: Haha, Drama pur! Wir sollten Eintrittskarten verkaufen!
+
+ID: b58780e07f4f
+/say Ada
+DE: …
+
+ID: bda0e77a1e6a
+/say Nami
+DE: M-Mädels… V-Vielleicht sollten wir nicht streiten?..
+
+ID: 8bb3b7d49d96
+/say @nameThoughts
+DE: <i>Und wieder steht die ganze Halle in Flammen… Super Start in den Tag
+
+ID: d96b6f879f8b
+/say @name
+DE: Sieht so aus, als wär ich genau rechtzeitig da!
+
+ID: d2c842427b6b
+/say @name
+DE: Guten Morgen, Sunset Angels. Wenn ich’s richtig sehe — Warm-up heute mit ’nem kleinen Zoff?

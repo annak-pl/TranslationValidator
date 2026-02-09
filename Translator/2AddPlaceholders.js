@@ -3,6 +3,7 @@
 //   (non-comment) is followed by empty translation placeholders.
 //
 //   The original file remains unchanged.
+//   Save in /TestRun1
 // USAGE:
 //   node 2AddPlaceholders.js ../Translator/TestRun1/Start_2_Fiona_Celeste.script
 // -------------------------------------------------------------
@@ -36,8 +37,8 @@ for (let i = 0; i < lines.length; i++) {
     // --- Detect Russian dialogue lines (including signs-only ones) ---
     if (RUSSIAN_REGEX.test(trimmed) || /^[.!?…—-]+$/.test(trimmed)) {
         // Insert placeholder structure
-        output.push("EN: ");
-        output.push("DE: ");
+        output.push("EN: MISSING TRANSLATION");
+        output.push("DE: MISSING TRANSLATION");
         output.push("ES: MISSING TRANSLATION");
         output.push("CN: MISSING TRANSLATION");
         continue;
