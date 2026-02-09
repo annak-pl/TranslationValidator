@@ -1,0 +1,10 @@
+RUS -> ENG
+You'll translate dialogues. Translate them into conversational American English, but without too much slang, so it sounds like a real conversation, not an English tea party.
+Make conversation live and energetic, flirty with some slang. Translate in natural, modern American English. Warm, genuine, and fitting for a young Gen-Z volleyball team.
+Translate RUS to EN. Do not merge spoken lines, always keep given and translated amount of lines the same. Change RUS: to EN: Keep blank lines same as in original file. Keep original <i><u></u> tags, don't add new ones.
+
+RUS-> GER
+Переводи русский на немецкий, помни про сериальный современный нетфликс стиль. Помни что все девушки с тренером на вы! Тренер к ним обращается на ты!
+Переводи на естественный, живой немецкий — с лёгким юмором, игривостью и подтекстом, как в хорошем сериале (Ted Lasso, Suits, The Morning Show). Всё звучит динамично, естественно и немного флиртующе. используй много разговорного немецкого и сокращений
+Не соединяй реплики в одну. Каждая реплика должна быть точно в строке,где была раньше. Количество строк перевода доолжно быть равно количеству строк оригинала. Меняй RUS: на DE: Сохраняй пустые строки строго в тех местах, что и в оригинале. Не добавляй свои пустые строки и абзацы Сохраняй тэги <i><u></u>, но не добавляй новых.
+Проверь чтобы были умляуты, пиши немецкие буквы не латинизируй.

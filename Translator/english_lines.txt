@@ -1,0 +1,34 @@
+/say Samantha
+EN: ...Could you show up to practice once without being late and making a scene, Brooke?
+
+/say Samantha
+EN: This is a volleyball gym, not a runway. Quit acting like you’re some kind of superstar!
+
+/say Brooke
+EN: Oh, sorry, Captain, for not fitting into your little robot army!
+
+/say Brooke
+EN: What’s next, hall passes and fines for wearing makeup?
+
+/say Roxanne
+EN: Wow, things escalated fast. Kinda wish I’d brought popcorn.
+
+/say Taylor
+EN: Ha! Straight-up drama! We should be charging tickets at the door!
+
+/say Ada
+EN: ...
+
+/say Nami
+EN: G-girls... m-maybe we shouldn’t fight?..
+
+/say @nameThoughts
+EN: <i>And the gym’s on fire again... awesome way to start the day.
+
+/say @name
+EN: Looks like I showed up at the perfect time!
+
+/say @name
+EN: Morning, Sunset Angels. Am I right in guessing today’s warm-up started with arguing?
+
+
