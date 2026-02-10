@@ -1,0 +1,186 @@
+
+
+
+/show overlay
+/wait 0.5
+
+/pos Celeste 0 instant
+/animate Celeste Idle IdleBlink EyesCenter HandsOnHipsPose
+/skin Celeste Celeste/SportsSuit
+/dir Celeste left
+
+/pos @name 0 instant
+/sort @name 1
+/skin @name SA Other/CupBlue
+/animate @name Empty
+
+/hide overlay
+/wait 0.5
+/show textbox
+
+
+
+/say Celeste Talk
+@name? Проходи, не стесняйся
+/say Celeste Talk HeadRegard EyesSearch
+Здесь, конечно, не люксовый курорт, но уют свой я очень ценю
+/animate Celeste EyesCenter
+/say @name
+Выглядишь расслабленной. Надеюсь, я не выбился из графика?
+/say Celeste Talk
+Нет, всё в порядке. Я как раз закончила с делами — так что ты вовремя
+/say @name
+Ты, кажется, обещала домашний лимонад. Прямо такой "фирменный"?
+/say Celeste MouthLaugh EyesClose
+Ха! Не только обещала — предупреждала, что конкурентов у меня на этом поле нет!
+/say Celeste Talk BrowsTwice
+И учти: мой лимонад — с характером. Надеюсь, ты готов?
+
+
+
+/choice Celeste И учти: мой лимонад — с характером. Надеюсь, ты готов?
+Celeste_choice_neutral Конечно — люблю неожиданные вкусы
+Celeste_choice_positive Я справлюсь с любым характером!
+Celeste_choice_negative С характером — это, надеюсь, не остро?
+
+
+
+/waypoint Celeste_choice_neutral
+
+/say @name
+Конечно — люблю неожиданные вкусы
+/say Celeste Talk Regard
+Вот и отлично. Значит, вечер обещает быть интересным!
+
+/jump Celeste_choice_end1
+
+
+
+/waypoint Celeste_choice_positive
+
+/say @name
+Не сомневайся, Селеста — я справлюсь с любым характером!
+/say Celeste Talk BrowsThink EyesChill
+Смелое заявление... Точно не переоцениваешь свои силы?
+/say @name
+Если речь о тебе — я только "за" рискнуть!
+
+/add hearts_Celeste 1
+/animate Celeste Like
+
+/say Celeste MouthLaugh BrowsSad HeadUpDown Blush
+О, теперь я уже чувствую вызов!
+/say Celeste Talk
+Держись, герой. Это будет жаркое испытание!
+
+/jump Celeste_choice_end1
+
+
+
+/waypoint Celeste_choice_negative
+
+/say @name
+С характером — это, надеюсь, не остро?
+/say Celeste Talk BrowsThink
+Ты так шутишь, или всё-таки боишься экспериментов на кухне?
+/say @name
+Ну, я просто... Э-э-э...
+
+/remove hearts_Celeste 1
+/animate Celeste Dislike
+
+/say Celeste Talk BrowsSad EyesChill
+Ладно. В следующий раз позову на чай. Там всё без сюрпризов...
+
+/jump Celeste_choice_end1
+
+
+
+/waypoint Celeste_choice_end1
+
+/say Celeste Talk BrowsNormal IdleBlink BlushClear
+Ну что, давай начинать наше кулинарное шоу?
+/say Celeste Talk
+Сегодня в выпуске вы узнаете, как рождается "фирменный" лимонад от Селесты Лэнгридж!
+/animate Celeste MouthSmile
+/say @name
+Главное, чтобы ты не начала кричать на меня как Гордон Рамзи!
+/say Celeste MouthLaugh EyesChillOnce2 BrowsSad
+Ха-ха-ха! 
+/say Celeste Talk Regard2 BrowsNormal
+Не буду. Но помни, что моя кухня не прощает нерешительных!
+
+
+
+/hide textbox
+/wait 0.5
+/show overlay
+/wait 0.5
+
+/pos Celeste 1 instant
+
+/wait 1
+/set background Celeste_4_HomemadeLemonade1
+/hide overlay
+/wait 0.5
+/show textbox
+
+
+
+/choice Celeste Нравится, как я тебя седлаю, милый?
+(hearts_Celeste 2) Celeste_choice_faster1 Давай побыстрее!
+Celeste_choice_neutral1 Да, продолжай
+
+
+
+/waypoint Celeste_choice_faster1
+
+/say @name
+Ты идеальна. Но если бы ты ускорилась — я был бы на седьмом небе...
+/animate Scene_4_FrontCowgirl_Celeste_ScriptObject Talk EyesChillOnce BrowsSad Push
+/say Celeste
+Вот так?
+/say @name
+Да... Чёрт, да...
+
+/hide textbox
+/animate Scene_4_FrontCowgirl_Celeste_ScriptObject MouthSmile EyesDown3 EyesChill
+/wait 7.5
+/show textbox
+
+/animate Scene_4_FrontCowgirl_Celeste_ScriptObject Talk EyesCenter BrowsThink
+/say Celeste
+Ну что, достаточно быстро, или у тебя хватит наглости просить больше?
+
+
+
+/choice Celeste Ну что, достаточно быстро, или у тебя хватит наглости просить больше?
+(hearts_Celeste 3) Celeste_choice_faster2 Давай ещё быстрее!
+Celeste_choice_neutral1 Просто продолжай...
+
+/hide textbox
+/wait 1
+/show overlay
+/wait 0.5
+
+/hide Scene_4_FrontCowgirl_Celeste_ScriptObject
+/set background clear
+
+/pos Celeste 0 instant
+/animate Celeste Idle IdleBlink EyesCenter HandsOnHipsPose Blush BrowsSad MouthSmile
+/skin Celeste Celeste/Body
+/dir Celeste left
+
+/pos @name 0 instant
+/sort @name 1
+/skin @name SA
+/animate @name Empty
+
+/wait 0.5
+
+/hide overlay
+/wait 1
+/show textbox
+
+/unlock Highlight_Celeste_4_HomemadeLemonade4
+
