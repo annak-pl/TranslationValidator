@@ -1,0 +1,167 @@
+
+
+
+/define int achievementPeacemaker 0
+
+/wait 1
+
+/pos @name 0 instant
+/sort @name 1
+/skin @name SA
+/animate @name Empty
+
+/show overlay
+/wait 0.5
+/set background Start_3_SunsetAngels1
+//АРТ: Повтор того арта из скрипта Start_3_SunsetAngels1, где они болтают вшестером
+/hide overlay
+/wait 0.5
+/show textbox
+
+
+
+/say Samantha
+...Ты можешь хотя бы раз прийти на тренировку без опозданий и сцен, Брук?
+ID: 417c5ba768ca
+EN: ...Could you show up to practice just once without being late and causing a scene, Brooke?
+DE: …Kannst du nicht wenigstens einmal pünktlich zum Training kommen, ohne Theater, Brooke?
+ES: MISSING TRANSLATION
+CN: MISSING TRANSLATION
+/say Samantha
+Это волейбольный зал, а не подиум. Хватит строить из себя звезду!
+ID: b2a97b95fd20
+EN: This is a volleyball gym, not a runway. Stop acting like some big star!
+DE: Das hier ist ’ne Volleyballhalle, kein Laufsteg. Hör auf, dich wie ’n Star aufzuspielen!
+ES: MISSING TRANSLATION
+CN: MISSING TRANSLATION
+/say Brooke
+Ой, прости, капитан, что не вписываюсь в твою армию роботов!
+ID: 1828167298cc
+EN: Oh, sorry, Captain, for not fitting into your little robot army!
+DE: Oh, sorry, Captain, dass ich nicht in deine Roboterarmee passe!
+ES: MISSING TRANSLATION
+CN: MISSING TRANSLATION
+/say Brooke
+Что дальше? Пропуск по расписанию и штраф за макияж?
+ID: 9bd56cbf65ba
+EN: What’s next—scheduled bathroom passes and fines for wearing makeup?
+DE: Was kommt als Nächstes? Fehlstunde im Stundenplan und ’ne Strafe fürs Make-up?
+ES: MISSING TRANSLATION
+CN: MISSING TRANSLATION
+/say Roxanne
+Вот это завелись! Жаль, я чипсы не прихватила
+ID: 8aa1766296fe
+EN: Damn, things got heated fast. Kinda wish I’d brought chips.
+DE: Oh wow, da geht’s ja richtig ab! Schade, hab’ keine Chips dabei.
+ES: MISSING TRANSLATION
+CN: MISSING TRANSLATION
+/say Taylor
+Ха-ха, чистая драма! Нам бы билетики продавать на входе!
+ID: 3e5444a1abd5
+EN: Ha! Total drama! We should be selling tickets at the door!
+DE: Haha, Drama pur! Wir sollten Eintrittskarten verkaufen!
+ES: MISSING TRANSLATION
+CN: MISSING TRANSLATION
+/say Ada
+...
+ID: b58780e07f4f
+EN: ...
+DE: …
+ES: MISSING TRANSLATION
+CN: MISSING TRANSLATION
+/say Nami
+Д-девочки... М-может, не стоит ругаться?..
+ID: bda0e77a1e6a
+EN: G-girls... m-maybe we shouldn’t be fighting?..
+DE: M-Mädels… V-Vielleicht sollten wir nicht streiten?..
+ES: MISSING TRANSLATION
+CN: MISSING TRANSLATION
+/say @nameThoughts
+<i>И снова весь зал в огне... Отличное начало дня
+ID: 8bb3b7d49d96
+EN: <i>And the whole gym’s on fire again... great start to the day.
+DE: <i>Und wieder steht die ganze Halle in Flammen… Super Start in den Tag
+ES: MISSING TRANSLATION
+CN: MISSING TRANSLATION
+
+/shake
+/set background Start_3_SunsetAngels2
+// Арт: То же самое, ток они на ГГ все посмотрели
+
+/say @name
+Кажется, я пришёл как раз вовремя!
+ID: d96b6f879f8b
+EN: Looks like I showed up right on time!
+DE: Sieht so aus, als wär ich genau rechtzeitig da!
+ES: MISSING TRANSLATION
+CN: MISSING TRANSLATION
+/say @name
+Доброе утро, Sunset Angels. Как я понял — разминка сегодня начинается с перепалки?
+ID: d2c842427b6b
+EN: Morning, Sunset Angels. Am I guessing right that today’s warm-up started with an argument?
+DE: Guten Morgen, Sunset Angels. Wenn ich’s richtig sehe — Warm-up heute mit ’nem kleinen Zoff?
+ES: MISSING TRANSLATION
+CN: MISSING TRANSLATION
+
+
+/hide textbox
+/wait 0.5
+/show overlay
+/set background clear
+
+/pos Ada 1 instant
+/animate Ada Idle IdleBlink EyesCenter
+/skin Ada Clothes/SADefUniformAda
+/dir Ada left
+
+/wait 0.1
+
+/pos Nami 1 instant
+/animate Nami Idle IdleBlink EyesCenter HandsBehindBody Blush
+/skin Nami Clothes/SADefUniformSmall
+/dir Nami left
+
+/wait 0.08
+
+/pos Roxanne -1 instant
+/animate Roxanne Idle IdleBlink EyesCenter
+/skin Roxanne Clothes/SADefUniform
+/dir Roxanne right
+
+/wait 0.1
+
+/pos Taylor -1 instant
+/animate Taylor Idle IdleBlink EyesCenter HandsBehindBody
+/skin Taylor Clothes/SADefUniform
+/dir Taylor right
+
+/wait 0.08
+
+/pos Brooke 1 instant
+/animate Brooke Idle IdleBlink EyesCenter HandsOnChestPose
+/skin Brooke Clothes/SADefUniform
+/dir Brooke left
+
+/pos Samantha 1 instant
+/animate Samantha Idle IdleBlink EyesCenter HandsOnHipsPose
+/skin Samantha Clothes/SADefUniform
+/dir Samantha left
+
+
+
+/hide textbox
+/wait 0.5
+/show overlay
+/set background clear
+/wait 0.5
+/hide overlay
+/pos Nami 0.38 slow
+/pos Brooke -0.1 slow
+/pos Samantha 0.07 slow
+/pos Ada 0.23 slow
+/pos Taylor -0.38 slow
+/pos Roxanne -0.23 slow
+/wait 0.5
+/show textbox
+
+

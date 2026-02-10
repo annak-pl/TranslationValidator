@@ -150,13 +150,16 @@ for (let i = 0; i < lines.length; i++) {
 
 /* ---------------- WRITE FILES ---------------- */
 
-fs.writeFileSync("russian_lines.txt", output.join("\n"), "utf8");
+fs.writeFileSync("russian_lines.script", output.join("\n"), "utf8");
 
 console.log("✅ Extracted Russian lines with hash IDs.");
 console.log(`ℹ️ Total extracted Russian lines: ${rusCount}`);
 
-fs.writeFileSync("english_lines.txt", "", "utf8");
+fs.writeFileSync("english_lines.script", "", "utf8");
 console.log("✅ Created empty english_lines.txt");
 
-fs.writeFileSync("german_lines.txt", "", "utf8");
+fs.writeFileSync("german_lines.script", "", "utf8");
 console.log("✅ Created empty german_lines.txt");
+
+fs.writeFileSync("spanish_lines.script", "", "utf8");
+console.log("✅ Created empty spanish_lines.txt");

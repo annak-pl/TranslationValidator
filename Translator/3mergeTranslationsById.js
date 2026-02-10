@@ -3,7 +3,7 @@ const path = require("path");
 
 if (process.argv.length < 4) {
     console.error(
-        "Usage: node mergeTranslationsById.js <translation.txt> <langFile.txt>"
+        "Usage: node 3mergeTranslationsById.js <translation.txt> <langFile.txt>"
     );
     process.exit(1);
 }
