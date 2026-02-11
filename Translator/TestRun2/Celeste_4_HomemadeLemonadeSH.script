@@ -29,10 +29,6 @@
 Выглядишь расслабленной. Надеюсь, я не выбился из графика?
 /say Celeste Talk
 Нет, всё в порядке. Я как раз закончила с делами — так что ты вовремя
-/say @name
-Ты, кажется, обещала домашний лимонад. Прямо такой "фирменный"?
-/say Celeste MouthLaugh EyesClose
-Ха! Не только обещала — предупреждала, что конкурентов у меня на этом поле нет!
 /say Celeste Talk BrowsTwice
 И учти: мой лимонад — с характером. Надеюсь, ты готов?
 
@@ -97,19 +93,6 @@ Celeste_choice_negative С характером — это, надеюсь, не
 
 
 /waypoint Celeste_choice_end1
-
-/say Celeste Talk BrowsNormal IdleBlink BlushClear
-Ну что, давай начинать наше кулинарное шоу?
-/say Celeste Talk
-Сегодня в выпуске вы узнаете, как рождается "фирменный" лимонад от Селесты Лэнгридж!
-/animate Celeste MouthSmile
-/say @name
-Главное, чтобы ты не начала кричать на меня как Гордон Рамзи!
-/say Celeste MouthLaugh EyesChillOnce2 BrowsSad
-Ха-ха-ха! 
-/say Celeste Talk Regard2 BrowsNormal
-Не буду. Но помни, что моя кухня не прощает нерешительных!
-
 
 
 /hide textbox

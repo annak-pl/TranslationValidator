@@ -4,53 +4,55 @@ const path = require("path");
 
 if (process.argv.length < 4) {
     console.error(
-        "Usage: node 5injectTranslations.js <translated_placeholder.txt> <translations_map.json> [final_output.txt]"
+        "Usage: node 4injectTranslations.js TeamReconciliationSh_Translated.script translations_map.json"
     );
     process.exit(1);
 }
 
-const placeholderFile = path.resolve(process.argv[2]);
+const scriptFile = path.resolve(process.argv[2]);
 const mapFile = path.resolve(process.argv[3]);
-const outputFile = path.resolve(process.argv[4] || "translation_final.script");
 
-const placeholderLines = fs.readFileSync(placeholderFile, "utf8").split(/\r?\n/);
+const lines = fs.readFileSync(scriptFile, "utf8").split(/\r?\n/);
 const translationsMap = JSON.parse(fs.readFileSync(mapFile, "utf8"));
 
-const output = [];
-let stats = { total: 0, filled: {}, missing: {} };
 const langOrder = ["EN", "DE", "ES", "CN"];
+let stats = { total: 0, filled: {}, missing: {} };
 
-for (let i = 0; i < placeholderLines.length; i++) {
-    const line = placeholderLines[i];
+// Initialize stats
+langOrder.forEach(lang => {
+    stats.filled[lang] = 0;
+    stats.missing[lang] = 0;
+});
+
+for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
 
     if (line.startsWith("ID:")) {
         const id = line.replace("ID:", "").trim();
         const trans = translationsMap[id] || {};
 
-        langOrder.forEach(lang => {
-            const placeholderIndex = i + 1 + langOrder.indexOf(lang); // assumes placeholder lines after ID
-            const currentLine = placeholderLines[placeholderIndex];
-            const value = trans[lang] || (currentLine.includes("MISSING") ? "MISSING TRANSLATION" : "");
-            placeholderLines[placeholderIndex] = `${lang}: ${value}`;
+        // Scan next lines for language placeholders
+        for (let j = i + 1; j < i + 6 && j < lines.length; j++) {
+            const match = lines[j].match(/^([A-Z]{2}):/);
+            if (!match) continue;
+
+            const lang = match[1];
+            const value = trans[lang] || "MISSING TRANSLATION";
+
+            lines[j] = `${lang}: ${value}`;
 
             stats.total++;
-            if (!stats.filled[lang]) stats.filled[lang] = 0;
-            if (!stats.missing[lang]) stats.missing[lang] = 0;
-
-            if (value && value !== "MISSING TRANSLATION") stats.filled[lang]++;
+            if (value !== "MISSING TRANSLATION") stats.filled[lang]++;
             else stats.missing[lang]++;
-        });
+        }
     }
-
-    output.push(placeholderLines[i]);
 }
 
-fs.writeFileSync(outputFile, output.join("\n"), "utf8");
+// Write back to the same file
+fs.writeFileSync(scriptFile, lines.join("\n"), "utf8");
 
-console.log(`✅ Final Unity-ready script generated → ${outputFile}`);
-console.log(`ℹ️ Stats:`);
+console.log(`✅ Translations injected in place → ${scriptFile}`);
+console.log("ℹ️ Stats:");
 langOrder.forEach(lang => {
-    console.log(
-        `${lang}: filled ${stats.filled[lang] || 0}, missing ${stats.missing[lang] || 0}`
-    );
+    console.log(`${lang}: filled ${stats.filled[lang]}, missing ${stats.missing[lang]}`);
 });

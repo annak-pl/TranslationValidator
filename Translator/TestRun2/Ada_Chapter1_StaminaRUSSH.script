@@ -44,11 +44,6 @@ Ada_choice_exit Не сейчас
 /animate Scene_1_JumpRope_Ada_ScriptObject Talk HeadRegard 
 /say Ada
 Я только что закончила разминку. Можем начинать, если хотите
-/say @name
-Ты, Ада, как всегда очень ответственная
-/say @name
-Давай выберем для тебя подходящую технику для скакалки. Хм-м...
-
 
 
 /choice @name Какую технику выбрать для Ады?
@@ -66,22 +61,7 @@ Ada_choice_correctjumps1 Продвинутый: темпо-блоки в 3 по
 /say Ada
 Ну... Если честно, я бы не назвала себя новичком...
 /animate Scene_1_JumpRope_Ada_ScriptObject Talk EyesClose2
-/say Ada
-Но вам, наверное, виднее, тренер
-/animate Scene_1_JumpRope_Ada_ScriptObject PushSlow EyesDown BrowsNormal
 
-/hide textbox
-/wait 8
-/show textbox
-
-/animate Scene_1_JumpRope_Ada_ScriptObject Talk EyesCenter Idle BrowsThink
-/say Ada
-Ну как, хватит?
-/say @name
-Думаю, достаточно. Как ощущения?
-/animate Scene_1_JumpRope_Ada_ScriptObject Talk HeadRightLeftFast
-/say Ada
-Странно. Будто вообще ничего не поменялось...
 
 /add time 1
 
@@ -94,11 +74,7 @@ Ada_choice_correctjumps1 Продвинутый: темпо-блоки в 3 по
 /say @name
 Давай попробуем более сложный вариант — три подхода по блокам
 /say @name
-Сначала медленно, потом быстро, а в конце снова сбавишь темп. Я проконтролирую
-/animate Scene_1_JumpRope_Ada_ScriptObject Talk EyesClose2
-/say Ada
-Поняла!
-/animate Scene_1_JumpRope_Ada_ScriptObject PushSlow EyesDown
+
 
 /hide textbox
 /wait 6.5
@@ -110,69 +86,6 @@ Ada_choice_correctjumps1 Продвинутый: темпо-блоки в 3 по
 /animate Scene_1_JumpRope_Ada_ScriptObject Talk
 /say Ada
 Всё нормально. Немного сбилось, но терпимо
-
-
-
-/choice @name Как Аде лучше дышать?
-Ada_choice_correctjumps2 Ровно и ритмично — вдох через нос, выдох через рот
-Ada_choice_incorrectjumps2 Задерживай дыхание — иногда так легче прыгать
-
-
-
-/waypoint Ada_choice_incorrectjumps2
-
-/animate Scene_1_JumpRope_Ada_ScriptObject BrowsThink
-/say @name
-Попробуй задерживать дыхание — некоторым так легче прыгать
-/animate Scene_1_JumpRope_Ada_ScriptObject Talk
-/say Ada
-Ладно, попробую...
-/animate Scene_1_JumpRope_Ada_ScriptObject Push EyesDown BrowsNormal
-
-/hide textbox
-/wait 3
-/animate Scene_1_JumpRope_Ada_ScriptObject MouthScream EyesCenter Idle BrowsSad Surprise AngryFX
-/pos hurtoverlay_scriptobject 0 instant
-/show textbox
-/shake
-
-/say Ada
-Ох, боже мой!.. Фух!..
-/animate Scene_1_JumpRope_Ada_ScriptObject Talk HeadRightLeftFast
-/say Ada
-Н-нет, мне так только хуже... В-воздуха не хватает...
-/say @name
-Ясно. Значит, тебе всё-таки подходит другой способ дыхания...
-
-/add time 1
-
-/jump Ada_choice_end
-
-
-
-/waypoint Ada_choice_correctjumps2
-
-/say @name
-Дыши ровно и ритмично — вдох через нос, выдох через рот
-/animate Scene_1_JumpRope_Ada_ScriptObject Talk
-/say Ada
-Хорошо, поняла!
-/animate Scene_1_JumpRope_Ada_ScriptObject Push EyesDown
-
-/hide textbox
-/wait 6.5
-/show textbox
-
-/animate Scene_1_JumpRope_Ada_ScriptObject EyesCenter Idle
-/say @name
-Остановись. Ну как дыхание на этот раз?
-/animate Scene_1_JumpRope_Ada_ScriptObject Talk HeadRegard
-/say Ada
-Вот теперь уже легче!
-/say @name
-Отлично. И давай сделаем наш последний подход...
-
-
 
 /choice @name Каким должен быть последний подход?
 Ada_choice_incorrectjumps3 Ещё быстрее, чем в предыдущий раз
@@ -197,28 +110,6 @@ Ada_choice_correctjumps3 Медленнее, как в первый раз
 /show textbox
 /shake
 
-/say Ada
-Ох, боже мой!..
-/animate Scene_1_JumpRope_Ada_ScriptObject Talk HeadRightLeftFast
-/say Ada
-Почти споткнулась. Слишком быстро для меня...
-/say @name
-Видимо, я прогадал. В следующий раз выберем другой темп...
-
-/add time 1
-
-/jump Ada_choice_end
-
-
-
-/waypoint Ada_choice_correctjumps3
-
-/say @name
-Сделай последний подход медленно, как в начале. Держи ровный темп и дыши спокойно
-/animate Scene_1_JumpRope_Ada_ScriptObject Talk
-/say Ada
-Хорошо
-/animate Scene_1_JumpRope_Ada_ScriptObject Push EyesDown
 
 /hide textbox
 /wait 6.5

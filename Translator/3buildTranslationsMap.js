@@ -1,10 +1,9 @@
-// buildTranslationsMap.js
 const fs = require("fs");
 const path = require("path");
 
 if (process.argv.length < 4) {
     console.error(
-        "Usage: node 3buildTranslationsMap.js <output_json> <langFile1> [langFile2 ...]"
+        "Usage: node 3buildTranslationsMap.js translations_map.json english_lines.script german_lines.script"
     );
     process.exit(1);
 }
